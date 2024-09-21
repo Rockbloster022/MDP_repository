@@ -11,7 +11,7 @@ public class HelloWordJavaFX extends Application {
  
     @Override
     public void start(Stage primaryStage) {
-     primaryStage.setTitle("Hello World!");
+     primaryStage.setTitle("Hello World! prueba");
      StackPane root = new StackPane();
      primaryStage.setScene(new Scene(root, 300, 250));
      primaryStage.show();
