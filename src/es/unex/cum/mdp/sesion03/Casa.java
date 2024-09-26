@@ -18,7 +18,7 @@ public class Casa {
 	public Casa() {
 		cont=0;
 		propietarios= new Persona[20];
-		habitantes = new ArrayList();
+		habitantes = new ArrayList<Persona>();
 	}
 
 	/**
@@ -29,7 +29,7 @@ public class Casa {
 	public Casa(int tam) {
 		cont=0;
 		propietarios= new Persona[tam];
-		habitantes = new ArrayList();
+		habitantes = new ArrayList<Persona>();
 	}
 
 	/**
@@ -39,7 +39,7 @@ public class Casa {
 	 */
 	public boolean addPropietario(Persona p) {
 		if(cont<propietarios.lenght){
-		for(int i=0;i<propietario.lenght;i++){
+		for(int i=0;i<propietarios.lenght;i++){
 			if(p.equals(propietarios[i])){
 				return false;
 			}
