@@ -38,9 +38,9 @@ public class Casa {
 	 * @return  true si se añade o false en otro caso.
 	 */
 	public boolean addPropietario(Persona p) {
-		if(cont<propietarios.lenght){
-		for(int i=0;i<propietarios.lenght;i++){
-			if(p.equals(propietarios[i])){
+		if(cont<propietarios.length){
+		for(int i=0;i<propietarios.length;i++){
+			if(p.getDni().equals(propietarios[i].getDni())){
 				return false;
 			}
 		}
@@ -57,10 +57,14 @@ public class Casa {
 	 * @return  true si se añade o false en otro caso.
 	 */
 	public boolean addHabitantes(Persona p) {
-		if(!habitantes.contains(p)){
-			habitantes.add(p);
+		Iterator<Persona> iteratorH = habitantes.iterator();
+		while(iteratorH.hasNext()){
+			if(iteratroH.next().getDni().equals(p.getDni())){
+				return false;
+			}
 		}
-		return false;
+		habitantes.add(p);
+		return true;
 	}
 
 	/**
