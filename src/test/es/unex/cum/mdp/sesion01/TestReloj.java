@@ -1,4 +1,4 @@
-package test.es.unex.cum.mdp.sesion01;
+package es.unex.cum.mdp.sesion01;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
