@@ -8,6 +8,7 @@ import java.util.List;
  * @author Luis Arevalo
  */
 public class Casa {
+	int cont;
 	private Persona[] propietarios;
 	private List<Persona> habitantes;
 
@@ -15,7 +16,9 @@ public class Casa {
 	 * Constructor por defecto
 	 */
 	public Casa() {
-		//TODO
+		cont=0;
+		propietarios= new Persona[20];
+		habitantes = new ArrayList();
 	}
 
 	/**
@@ -24,7 +27,9 @@ public class Casa {
 	 */
 
 	public Casa(int tam) {
-		// TODO
+		cont=0;
+		propietarios= new Persona[tam];
+		habitantes = new ArrayList();
 	}
 
 	/**
@@ -33,7 +38,16 @@ public class Casa {
 	 * @return  true si se añade o false en otro caso.
 	 */
 	public boolean addPropietario(Persona p) {
-		// TODO
+		if(cont<propietarios.lenght){
+		for(int i=0;i<propietario.lenght;i++){
+			if(p.equals(propietarios[i])){
+				return false;
+			}
+		}
+		propietarios[cont]=p;
+		cont++;
+		return true;
+		}
 		return false;
 	}
 
@@ -43,7 +57,9 @@ public class Casa {
 	 * @return  true si se añade o false en otro caso.
 	 */
 	public boolean addHabitantes(Persona p) {
-		// TODO
+		if(!habitantes.contains(p)){
+			habitantes.add(p);
+		}
 		return false;
 	}
 
