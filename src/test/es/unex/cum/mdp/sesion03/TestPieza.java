@@ -17,6 +17,7 @@ public class TestPieza {
 		p1 = new Pieza();
 		p2 = new Pieza("1", "Freno", 2);
 		p3 = new Pieza(p2);
+
 	}
 
 	@AfterEach
