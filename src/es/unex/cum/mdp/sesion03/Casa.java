@@ -1,6 +1,7 @@
 package es.unex.cum.mdp.sesion03;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -38,16 +39,15 @@ public class Casa {
 	 * @return  true si se añade o false en otro caso.
 	 */
 	public boolean addPropietario(Persona p) {
-		if(cont<propietarios.length){
 		for(int i=0;i<propietarios.length;i++){
+			if(propietarios[i]==null){
+				propietarios[i]=p;
+				return true;
+			}
 			if(p.getDni().equals(propietarios[i].getDni())){
 				return false;
 			}
-		}
-		propietarios[cont]=p;
-		cont++;
-		return true;
-		}
+	}
 		return false;
 	}
 
@@ -59,7 +59,7 @@ public class Casa {
 	public boolean addHabitantes(Persona p) {
 		Iterator<Persona> iteratorH = habitantes.iterator();
 		while(iteratorH.hasNext()){
-			if(iteratroH.next().getDni().equals(p.getDni())){
+			if(iteratorH.next().getDni().equals(p.getDni())){
 				return false;
 			}
 		}
