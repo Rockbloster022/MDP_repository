@@ -1,12 +1,12 @@
 package es.unex.cum.mdp.sesion03;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-import org.junit.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class TestPieza {
 
@@ -17,7 +17,6 @@ public class TestPieza {
 		p1 = new Pieza();
 		p2 = new Pieza("1", "Freno", 2);
 		p3 = new Pieza(p2);
-
 	}
 
 	@AfterEach
